@@ -22,14 +22,25 @@ async function fetchCharacters(pageNumber) {
   const data = await response.json();
   return data;
 }
-const characters = await fetchCharacters(1);
-console.log("characters: ", characters);
 
-function characterCard() {
+
+async function characterCard() {
+  const data = await fetchCharacters(1);
+  const characters = data.results;
   const cardContainer = document.querySelector('[data-js="card-container"]');
-  const cardElement = createCharacterCard();
+  cardContainer.innerHTML = "";
+  characters.forEach((character)=>{
+    console.log(character)
+    const characterName =  character.name;
+    const imageSource= character.image;
+    const status = character.status;
+    const characterType = character.type;
+    const occurences = character.episode.length;
+  const cardElement = createCharacterCard(imageSource, characterName, status, characterType, occurences);
   cardContainer.append(cardElement);
-  console.log(cardContainer);
+    
+  })
+  
 }
 
 characterCard();
