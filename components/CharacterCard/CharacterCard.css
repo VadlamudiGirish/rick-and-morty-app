@@ -1,9 +1,15 @@
 .card-container {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .card {
+  overflow: hidden;
   width: 300px;
   background-color: var(--color-secondary);
+  margin: 10px;
+  align-self: center;
+  border-radius: 20px;
 }
 
 .card__info {
@@ -22,4 +28,8 @@
 
 li {
   list-style: none;
+}
+
+.card__title {
+  text-align: center;
 }

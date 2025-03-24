@@ -30,7 +30,7 @@ async function characterCard(page, searchQuery) {
     const characterName = character.name;
     const imageSource = character.image;
     const status = character.status;
-    const characterType = character.type;
+    const characterType = character.type ? character.type : "nill";
     const occurences = character.episode.length;
     const cardElement = createCharacterCard(
       imageSource,
