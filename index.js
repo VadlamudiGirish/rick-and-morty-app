@@ -23,9 +23,10 @@ async function fetchCharacters(page, searchQuery) {
   return data;
 }
 
-async function characterCard(page, searchQuery = "") {
+async function characterCard(page, searchQuery) {
   const data = await fetchCharacters(page, searchQuery);
   maxPage = data.info.pages;
+  pagination.textContent = `${page}/${maxPage}`;
   const cardContainer = document.querySelector('[data-js="card-container"]');
   cardContainer.innerHTML = "";
   const characters = data.results;
@@ -45,26 +46,27 @@ async function characterCard(page, searchQuery = "") {
     cardContainer.append(cardElement);
   });
 }
-await characterCard();
+await characterCard(page, searchQuery);
 pagination.textContent = `${page}/${maxPage}`;
 
 prevButton.addEventListener("click", async () => {
   page === 1 ? (page = 1) : (page = page - 1);
   pagination.textContent = `${page}/${maxPage}`;
-  await characterCard(page);
+  await characterCard(page, searchQuery);
 });
 
 nextButton.addEventListener("click", async () => {
   page === maxPage ? (page = maxPage) : (page = page + 1);
   pagination.textContent = `${page}/${maxPage}`;
-  await characterCard(page);
+  await characterCard(page, searchQuery);
 });
 
 searchBar.addEventListener("submit", (event) => {
   event.preventDefault();
+
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
   searchQuery = data.query;
-  characterCard(page, searchQuery);
+  characterCard(1, searchQuery);
 });
