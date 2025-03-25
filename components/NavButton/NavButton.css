@@ -1,8 +1,11 @@
 .button {
   border: solid;
   border-color: var(--color-secondary);
-
+  border-radius: 100%;
+  font-size: x-large;
   padding: 4px;
+  min-width: 50px;
+  border-color: #b3d531;
 }
 
 .button:hover {
