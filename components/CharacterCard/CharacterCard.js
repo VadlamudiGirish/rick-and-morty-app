@@ -1,7 +1,14 @@
-export function createCharacterCard(imageSource, characterName, status, characterType, occurences) {
+export function createCharacterCard(
+  imageSource,
+  characterName,
+  status,
+  characterType,
+  occurences
+) {
   const liElement = document.createElement("li");
   liElement.className = "card";
   liElement.innerHTML = `<div class="card__image-container">
+  <h2 class="card__title">${characterName}</h2>
             <img
               class="card__image"
               src=${imageSource}
@@ -10,7 +17,6 @@ export function createCharacterCard(imageSource, characterName, status, characte
             <div class="card__image-gradient"></div>
           </div>
           <div class="card__content">
-            <h2 class="card__title">${characterName}</h2>
             <dl class="card__info">
               <dt class="card__info-title">Status</dt>
               <dd class="card__info-description">${status}</dd>
