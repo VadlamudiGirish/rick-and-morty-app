@@ -10,7 +10,7 @@
   grid-template-columns: 1fr 24px;
   border-radius: 20px;
   border: solid;
-  border-color: #b3d531;
+  border-color: var(--color-custom_green);
 }
 
 .search-bar__input {
