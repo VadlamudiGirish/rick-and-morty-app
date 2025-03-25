@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "wubba lubba dub dub";
-  src: url("/assets/WubbaLubbaDubDub.otf");
+  src: url (assets/wubbalubbadubdub.otf);
 }
 
 * {
