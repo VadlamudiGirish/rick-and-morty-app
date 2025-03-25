@@ -5,7 +5,7 @@
   font-size: x-large;
   padding: 4px;
   min-width: 50px;
-  border-color: #b3d531;
+  border-color: var(--color-custom_green);
 }
 
 .button:hover {

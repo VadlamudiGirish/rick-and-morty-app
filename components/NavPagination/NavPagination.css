@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-self: center;
-  background-color: #00c0d5;
+  background-color: var(--color-custom_blue);
   position: fixed;
   width: 100%;
   bottom: 0;

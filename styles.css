@@ -18,11 +18,14 @@
   --color-primary: rgb(51, 51, 51);
   --color-secondary: #f6f6f6;
   --font-family: system-ui;
+  --color-custom_green: #b3d531;
+  --color-custom_blue: #00c0d5;
 }
 
 body {
   font-family: var(--font-family);
   color: var(--color-primary);
+  background-color: #2f3531;
 }
 
 main {
@@ -34,7 +37,7 @@ main {
 }
 
 header {
-  background-color: #00c0d5;
+  background-color: var(--color-custom_blue);
   display: flex;
   flex-direction: column;
   position: fixed;

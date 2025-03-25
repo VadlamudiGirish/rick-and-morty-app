@@ -6,10 +6,13 @@
 .card {
   overflow: hidden;
   width: 300px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-custom_green);
   margin: 10px;
   align-self: center;
   border-radius: 20px;
+  border: solid;
+  border-color: var(--color-custom_green);
+  border-width: 10px;
 }
 
 .card__info {
