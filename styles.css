@@ -3,6 +3,11 @@
 @import "components/NavButton/NavButton.css";
 @import "components/NavPagination/NavPagination.css";
 
+@font-face {
+  font-family: "wubba lubba dub dub";
+  src: url (assets/wubbalubbadubdub.otf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,4 +34,10 @@ main {
 
 .title {
   padding: 10px 0;
+  font-family: "wubba lubba dub dub";
+  color: #41b4c9;
+}
+
+h2 {
+  font-family: "wubba lubba dub dub";
 }
